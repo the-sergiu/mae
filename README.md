@@ -21,6 +21,21 @@ This is a PyTorch/GPU re-implementation of the paper [Masked Autoencoders Are Sc
 
 * This repo is based on [`timm==0.3.2`](https://github.com/rwightman/pytorch-image-models), for which a [fix](https://github.com/rwightman/pytorch-image-models/issues/420#issuecomment-776459842) is needed to work with PyTorch 1.8.1+.
 
+We leverage this implementation and base model: [GitHub: Masked Autoencoders: A PyTorch Implementation](https://github.com/facebookresearch/mae/blob/main/README.md )
+
+
+### 2.1. Download either of the checkpoints, and place them in the `pretrained` directory.
+```
+pretrained/mae_pretrain_vit_{base|large|huge}
+
+# Links:
+# https://dl.fbaipublicfiles.com/mae/visualize/mae_visualize_vit_base.pth
+# https://dl.fbaipublicfiles.com/mae/visualize/mae_visualize_vit_large.pth
+# https://dl.fbaipublicfiles.com/mae/visualize/mae_visualize_vit_huge.pth
+```
+
+### 2.2. Double check that we have `timm==0.4.12` version installed. Code from `mae.py` should run without issues, but certain changes to `numpy` may affect current functionality.
+
 ### Catalog
 
 - [x] Visualization demo
@@ -33,6 +48,8 @@ Run our interactive visualization demo using [Colab notebook](https://colab.rese
 <p align="center">
   <img src="https://user-images.githubusercontent.com/11435359/147859292-77341c70-2ed8-4703-b153-f505dcb6f2f8.png" width="600">
 </p>
+
+Also, locally check out `Masked_AutoEncoder_Scalable_Vision_Learner.ipynb`.
 
 ### Fine-tuning with pre-trained checkpoints
 
